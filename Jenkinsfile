@@ -9,8 +9,6 @@ pipeline {
     stage('Test') {
       steps {
         echo 'Testing...'
-        sh 'wget --version'
-        sh 'gcc --version'
       }
     }
     stage('Deploy') {
