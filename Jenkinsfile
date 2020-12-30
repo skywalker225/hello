@@ -1,5 +1,5 @@
 pipeline {
-  agent any
+  agent { dockerfile true }
   stages {
     stage('Build') {
       steps {
@@ -9,6 +9,8 @@ pipeline {
     stage('Test') {
       steps {
         echo 'Testing...'
+        sh 'wget --version'
+        sh 'gcc --version'
       }
     }
     stage('Deploy') {
