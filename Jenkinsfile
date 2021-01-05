@@ -5,8 +5,7 @@ pipeline {
       agent { dockerfile true }
       steps {
         echo 'Building...'
-        sh 'node --version'
-        sh 'svn --version'
+        sh 'pwd'
       }
     }
     stage('Test') {
