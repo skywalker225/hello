@@ -6,6 +6,7 @@ pipeline {
       steps {
         echo 'Building...'
         sh 'pwd'
+        sh 'make --version'
       }
     }
     stage('Test') {
